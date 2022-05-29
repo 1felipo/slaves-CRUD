@@ -2,7 +2,7 @@
 
 A CRUD where you will be able to manage your slaves (it's not real, (or yes?) 🧐 )!
 
-## Available scripts
+## Available scripts 👨‍💻
 
 Install the project modules: in the project directory:
 
