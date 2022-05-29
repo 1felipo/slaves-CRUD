@@ -28,6 +28,7 @@ router.put("/turn/:id", async (req:Request, res:Response)=>{
     const slave = await Slave.findById(id)
     slave.status = !slave.status
     await slave.save()
+    console.log(colors.green(`The slave ("${slave.slave}") was changed her status (now is ${slave.status}) successfully`))
 }) // Change slave status
 
 export default router
