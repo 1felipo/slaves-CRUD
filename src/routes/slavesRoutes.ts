@@ -18,7 +18,8 @@ router.post("/add", async (req:Request,res:Response)=>{
 
 router.delete("/delete/:id", async (req:Request,res:Response)=>{
     const id = req.params.id
-    await Slave.remove({_id:id})
+    await Slave.deleteOne({_id:id})
+    console.log(colors.green("The slave was deleted from the db successfully"))
 }) // Delete the slaves
 
 router.put("/turn/:id", async (req:Request, res:Response)=>{
