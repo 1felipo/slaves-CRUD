@@ -1,11 +1,12 @@
 import {Router, Request, Response} from "express"
+import colors from "colors/safe"
 const router = Router()
 
 import Slave from  "../models/slaves"
 
 router.get("/", async (req: Request,res: Response)=>{
     const slaves = await Slave.find()
-    console.log(slaves)
+    console.log(colors.green("The slaves were gived successfully"))
     res.send(slaves)
 }) // Get the slaves
 
