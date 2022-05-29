@@ -1,4 +1,4 @@
-﻿# Slaves CRUD
+﻿# Slaves CRUD 🎉 🎊 🥳 🦄
 
 A CRUD where you will be able to manage your slaves (it's not real, (or yes?) 🧐 )!
 
