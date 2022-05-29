@@ -4,18 +4,50 @@ A CRUD where you will be able to manage your slaves (it's not real, (or yes?) �
 
 ## Available scripts 👨‍💻
 
-Install the project modules: in the project directory:
+>  All the scripts in the project directory
 
-    npm install
+Install the project modules:
+
+    cd api
+    npm i
+    cd ../frontend
+    npm i
     
-run the project in development mode:
+### Api scripts
 
-    npm run dev
+>  All the scripts in the api directory: *./api*
 
-build the project in "./dist":
+run the api:
+
+    cd api
+    npm start
+
+build the api in *"./api/dist"*:
+
+    cd api
+    npm run build
+
+remove the *"./api/dist"* folder:
+
+    cd api
+    npm run clean
+
+### Frontend scripts
+
+>  All the scripts in the frontend directory: *./frontend*
+
+run the frontend in development mode:
+
+    npm start
+
+build the frontend in *"./frontend/build"*:
 
     npm run build
 
-remove the "./dist" folder:
+remove the *./frontend/build* folder:
 
-    npm run clean
+    npm run eject
+
+test the frontend:
+
+    npm run test
