@@ -7,4 +7,8 @@ const startAppCallback = () => {
     console.log(colors.green(`server on port ${config.PORT}`))
 }
 
+// Connect with the DB
+database()
+
+// Start APP
 app.listen(config.PORT, startAppCallback)

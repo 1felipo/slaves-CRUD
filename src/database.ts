@@ -5,8 +5,8 @@ import config from "./config"
 async function connect() {
 
     try{
-        await mongoose.connect(`mongodb+srv://${config.DB_USERNAME}:${config.DB_PASSWORD}@cluster0.kqkfu.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`)
-        console.log(colors.green("Database connected succesful"))
+        await mongoose.connect(`mongodb+srv://${config.DB_USERNAME}:${config.DB_PASSWORD}@${config.DB_CLUSTER}.kqkfu.mongodb.net/?retryWrites=true&w=majority`)
+        console.log(colors.green("Database connected successful"))
     }
     catch{
         console.log(colors.red("Error connecting with the db"))
