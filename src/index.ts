@@ -1,6 +1,6 @@
-import App from "./app"
+import app from "./app"
 import database from "./database"
 
-database()
-const app = new App()
-app.start()
+app.listen(3001, ()=>{
+    console.log("server on port 3001")
+})

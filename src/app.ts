@@ -1,40 +1,26 @@
-import express, { json } from "express"
+import express, { json, urlencoded } from "express"
 import morgan from "morgan"
-import path from "path"
 
 import slavesRoutes from "./routes/slavesRoutes"
 
-class Application {
-    
-    app: express.Application
+// Init app with express
 
-    constructor(){
-        this.app = express()
-        this.settings()
-        this.middlewares()
-        this.routes()
-    }
+const app = express()
 
-    settings(){
-        this.app.set("port",3000)
-        this.app.set("view engine", "ejs")
-    }
+// App settings
 
-    middlewares(){
-        this.app.use(morgan("dev"))
-        this.app.use(express.json())
-        this.app.use(express.urlencoded({extended:false}))
-    }
+app.set("port", 3000)
 
-    routes(){
-        this.app.use(slavesRoutes)
-    }
+// App middlewares
 
-    start(){
-        this.app.listen(this.app.get("port"), ()=>{
-            console.log(`Server on port ${this.app.get("port")}`)
-        })
-    }
-}
+app.use(morgan("dev"))
+app.use(json())
+app.use(urlencoded({extended:false}))
 
-export default Application
+// App routes
+
+app.use(slavesRoutes)
+
+// Export App
+
+export default app
