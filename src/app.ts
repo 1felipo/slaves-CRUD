@@ -2,7 +2,7 @@ import express, { json } from "express"
 import morgan from "morgan"
 import path from "path"
 
-import indexRoutes from "./routes/index"
+import slavesRoutes from "./routes/slavesRoutes"
 
 class Application {
     
@@ -17,7 +17,6 @@ class Application {
 
     settings(){
         this.app.set("port",3000)
-        this.app.set("views", path.join(__dirname, "views"))
         this.app.set("view engine", "ejs")
     }
 
@@ -28,7 +27,7 @@ class Application {
     }
 
     routes(){
-        this.app.use(indexRoutes)
+        this.app.use(slavesRoutes)
     }
 
     start(){
