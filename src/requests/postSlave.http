@@ -1,0 +1,7 @@
+POST {{hostname}}/add
+Content-Type: application/json
+
+{
+    "slave": "Carolina Peralta",
+    "description": "Es una buena ama de casa"
+}

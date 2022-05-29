@@ -11,9 +11,9 @@ router.get("/", async (req: Request,res: Response)=>{
 }) // Get the slaves
 
 router.post("/add", async (req:Request,res:Response)=>{
-    console.log(new Slave(req.body))
     const slave = new Slave(req.body)
     await slave.save()
+    console.log(colors.green("The slave was registered in the db successfully"))
 }) // Add new slaves
 
 router.delete("/delete/:id", async (req:Request,res:Response)=>{
