@@ -13,7 +13,7 @@ Install the project modules:
     cd ../frontend
     npm i
     
-### Api scripts 🔗💻
+### Api scripts🔗💻
 
 >  All the scripts in the api directory: *./api*
 
@@ -32,7 +32,7 @@ remove the *"./api/dist"* folder:
     cd api
     npm run clean
 
-### Frontend scripts 🎆🎇
+### Frontend scripts🎆🎇
 
 >  All the scripts in the frontend directory: *./frontend*
 
