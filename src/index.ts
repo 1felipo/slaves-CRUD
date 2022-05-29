@@ -1,6 +1,9 @@
 import app from "./app"
 import database from "./database"
+import colors from "colors/safe"
 
-app.listen(3001, ()=>{
-    console.log("server on port 3001")
-})
+const startAppCallback = () => {
+    console.log(colors.green("server on port 3000"))
+}
+
+app.listen(3001, startAppCallback)

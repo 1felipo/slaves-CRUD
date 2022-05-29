@@ -1,5 +1,9 @@
+// Import modules
+
 import express, { json, urlencoded } from "express"
 import morgan from "morgan"
+
+// Import Routes 
 
 import slavesRoutes from "./routes/slavesRoutes"
 
