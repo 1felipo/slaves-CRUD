@@ -1,0 +1,14 @@
+/.vscode
+/api/node_modules
+/frontend/node_modules
+config.ts
+/frontend/.pnp
+/frontend/.pnp.js
+/frontend/build
+/api/dist
+/frontend/.DS_Store
+/frontend/.env.local
+/frontend/.env.development.local
+/frontend/.env.test.local
+/frontend/.env.production.local
+/frontend/coverage
