@@ -2,6 +2,6 @@ POST {{hostname}}/add
 Content-Type: application/json
 
 {
-    "slave": "Carolina Peralta",
-    "description": "Es una buena ama de casa"
+    "slave": "Natalí Machaca",
+    "description": "Es buena en todo lo que hace!"
 }
