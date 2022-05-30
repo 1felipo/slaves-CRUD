@@ -20,7 +20,7 @@ const SlavesContainer = () => {
 
   useEffect(()=>{
     getSlaves()
-  },[])
+  },[slaves])
 
   const deleteSlave = async (id:string) => {
     await axios.delete(config.deleteSlaveEndPoint+id)

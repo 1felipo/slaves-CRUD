@@ -32,6 +32,7 @@ router.put("/turn/:id", async (req:Request, res:Response)=>{
 }) // Change slave status
 
 router.put("/edit/:id", async (req:Request, res:Response)=>{
+    console.log(req.params.id + " and " + req.body)
     const id = req.params.id
     await Slave.deleteOne({_id:id})
     const slave = new Slave(req.body)
