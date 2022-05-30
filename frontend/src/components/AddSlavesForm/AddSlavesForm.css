@@ -1,6 +1,7 @@
 .slavesForm-container{
     margin-top: 2em;
     text-align: center;
+    margin-bottom: 2em;
 }
 
 .addslave-form input:first-child {
@@ -20,7 +21,7 @@
     width: 40%;
     resize: none;
     height: 6em;
-    margin: 0.3em auto;
+    margin: 0.3em auto 1em;
     border-radius: 8px;
     padding: 0.5em 0.8em;
 }

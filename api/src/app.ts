@@ -2,6 +2,7 @@
 
 import express, { json, urlencoded } from "express"
 import morgan from "morgan"
+import cors from "cors"
 
 // Import Routes 
 
@@ -20,6 +21,7 @@ app.set("port", 3000)
 app.use(morgan("dev"))
 app.use(json())
 app.use(urlencoded({extended:false}))
+app.use(cors())
 
 // App routes
 
