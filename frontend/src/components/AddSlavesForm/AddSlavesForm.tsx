@@ -23,7 +23,7 @@ const AddSlavesForm = () => {
     setSlaveDescription(event.currentTarget.value)
   }
 
-  const handleSaveSlave = () => {
+  const handleSaveSlave = (event:React.FormEvent<HTMLInputElement>) => {
     postSlave({
       slave:slaveName,
       description:slaveDescription

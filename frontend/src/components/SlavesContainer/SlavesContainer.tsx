@@ -8,6 +8,8 @@ import "./SlavesContainer.css"
 const SlavesContainer = () => {
 
   const [slaves, setSlaves] = useState<{description:string;slave:string;status:boolean;__v:string;_id:string}[]>()
+  const [slaveNameEdit, setSlaveNameEdit] = useState("")
+  const [slaveDescriptionEdit, setSlaveDescriptionEdit] = useState("")
 
   const getSlaves = () => {
     axios.get(config.getSlavesEndPoint)
@@ -20,14 +22,16 @@ const SlavesContainer = () => {
     getSlaves()
   },[])
 
-  const deleteSlave = (id:string) => {
-    axios.delete(config.deleteSlaveEndPoint+id)
-    window.location.reload()
+  const deleteSlave = async (id:string) => {
+    await axios.delete(config.deleteSlaveEndPoint+id)
   }
 
   const putSlaveStatus = (id:string) => {
     axios.put(config.putSlaveStatusEndPoint+id)
-    window.location.reload()
+  }
+
+  const putSlaveEdit = (id:string) => {
+    alert("En desarrollo")
   }
 
   const theme = useContext(ThemeContext)
@@ -37,6 +41,7 @@ const SlavesContainer = () => {
       {
         slaves?.map((slave,i)=>{
           return(
+            <>
             <div className='slave-container-main' 
             key={i}
             style={{background:theme.softColor}}>
@@ -55,10 +60,19 @@ const SlavesContainer = () => {
                 onClick={()=>putSlaveStatus(slave._id)}>
                   Sold?
                 </button>
-                <button>Edit</button>
+                <button onClick={()=>putSlaveEdit(slave._id)}>
+                  Edit
+                </button>
               </div>
-
             </div>
+            <div className="edit-slave-container" style={{background:theme.softColor}}>
+              <input style={{background:theme.softColor}}
+              value={slave.slave}/>
+              <textarea style={{background:theme.softColor}}
+              value={slave.description}></textarea>
+              <button>Edit</button>
+            </div>
+            </>
           )
         })
       }

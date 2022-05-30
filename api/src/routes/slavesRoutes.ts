@@ -31,4 +31,12 @@ router.put("/turn/:id", async (req:Request, res:Response)=>{
     console.log(colors.green(`The slave ("${slave.slave}") was changed her status (now is ${slave.status}) successfully`))
 }) // Change slave status
 
+router.put("/edit/:id", async (req:Request, res:Response)=>{
+    const id = req.params.id
+    await Slave.deleteOne({_id:id})
+    const slave = new Slave(req.body)
+    await slave.save()
+    console.log(colors.green(`The slave ("${slave.slave}") was changed successfully`))
+}) // Edit slave
+
 export default router
