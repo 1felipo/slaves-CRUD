@@ -1,0 +1,15 @@
+.navbarBrand-container {
+    display: flex;
+    align-items: center;
+}
+
+.navbarBrand-container img{
+    width: 3em;
+    margin-right: 0.5em;
+}
+
+.navbarBrand-container h1{
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #5463FF;
+}

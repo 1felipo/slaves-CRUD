@@ -1,0 +1,7 @@
+PUT {{hostname}}/edit/6294efb5b5d7a60c0f27df58
+Content-Type: application/json
+
+{
+    "slave": "Felipe Delicia",
+    "description": "Espera... si sabe hacer cosas"
+}
