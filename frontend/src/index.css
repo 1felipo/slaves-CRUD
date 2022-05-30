@@ -8,3 +8,8 @@ input, textarea{
   outline: inherit;
   border: inherit;
 }
+
+button {
+  background-color: inherit;
+  border: inherit;
+}
