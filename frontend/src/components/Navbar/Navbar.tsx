@@ -32,9 +32,7 @@ const SwitchTheme = (props:NavbarPropTypes) => {
 }
 
 const Navbar = (props:NavbarPropTypes) => {
-
   const theme = useContext(ThemeContext)
-
   return (
     <div className="navbar-container" style={{ background: theme.background, boxShadow: theme.boxShadow}}>
         <div className="navbar-item"><NavbarBrand/></div>
