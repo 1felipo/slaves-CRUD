@@ -41,12 +41,12 @@ const SlaveEditCard = (props: SlaveCardProps) => {
       style={{ background: theme.softColor }}
     >
       <input
-        style={{ background: theme.softColor }}
+        style={{ background: theme.softColor, color:theme.inverseColor }}
         value={slaveNameEdit}
         onChange={(event) => handleChangeName(event)}
       />
       <textarea
-        style={{ background: theme.softColor }}
+        style={{ background: theme.softColor, color:theme.inverseColor }}
         value={slaveDescriptionEdit}
         onChange={(event) => handleChangeDescription(event)}
       ></textarea>
