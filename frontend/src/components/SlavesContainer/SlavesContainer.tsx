@@ -25,6 +25,11 @@ const SlavesContainer = () => {
     window.location.reload()
   }
 
+  const putSlaveStatus = (id:string) => {
+    axios.put(config.putSlaveStatusEndPoint+id)
+    window.location.reload()
+  }
+
   const theme = useContext(ThemeContext)
 
   return (
@@ -45,7 +50,9 @@ const SlavesContainer = () => {
                 <button onClick={()=>deleteSlave(slave._id)}>
                   Delete
                 </button>
-                <button style={slave.status?{background:"#36AE7C"}:{background:"#F32424"}}>
+                <button 
+                style={slave.status?{background:"#36AE7C"}:{background:"#F32424"}}
+                onClick={()=>putSlaveStatus(slave._id)}>
                   Sold?
                 </button>
                 <button>Edit</button>
