@@ -2,7 +2,9 @@ import React from 'react'
 
 const SlavesContainer = () => {
   return (
-    <div>SlavesContainer</div>
+    <div>
+      
+    </div>
   )
 }
 
