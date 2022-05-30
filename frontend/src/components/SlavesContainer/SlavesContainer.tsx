@@ -10,7 +10,7 @@ const SlavesContainer = () => {
   const [slaves, setSlaves] = useState<{description:string;slave:string;status:boolean;__v:string;_id:string}[]>()
 
   const getSlaves = () => {
-    axios.get(config.slavesEndPoint)
+    axios.get(config.getSlavesEndPoint)
     .then(res => {
         setSlaves(res.data);
       })
@@ -26,7 +26,6 @@ const SlavesContainer = () => {
     <div className="slaves-container-container">
       {
         slaves?.map((slave,i)=>{
-          console.log(slave.status)
           return(
             <div className='slave-container-main' 
             key={i}
