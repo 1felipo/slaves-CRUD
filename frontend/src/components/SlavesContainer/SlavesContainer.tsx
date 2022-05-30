@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { useEffect, useState, useContext } from 'react'
+import React, { useEffect, useState, useContext } from 'react'
 
 import config from '../../configuration/config'
 import ThemeContext from '../../configuration/theme';
@@ -20,6 +20,11 @@ const SlavesContainer = () => {
     getSlaves()
   },[])
 
+  const deleteSlave = (id:string) => {
+    axios.delete(config.deleteSlaveEndPoint+id)
+    window.location.reload()
+  }
+
   const theme = useContext(ThemeContext)
 
   return (
@@ -30,17 +35,22 @@ const SlavesContainer = () => {
             <div className='slave-container-main' 
             key={i}
             style={{background:theme.softColor}}>
+
               <div className="slave-data">
                 <h3 style={{color:theme.inverseColor}}>{slave.slave}</h3>
                 <p style={{color:theme.inverseColor}}>{slave.description}</p>
               </div>
+
               <div className="slave-controllers">
-                <button>Delete</button>
+                <button onClick={()=>deleteSlave(slave._id)}>
+                  Delete
+                </button>
                 <button style={slave.status?{background:"#36AE7C"}:{background:"#F32424"}}>
                   Sold?
                 </button>
                 <button>Edit</button>
               </div>
+
             </div>
           )
         })
