@@ -1,53 +1,53 @@
-﻿# Slaves CRUD 🎉 🎊 🥳 🦄
+# Slaves CRUD 🎉 🎊 🥳 🦄
 
-A CRUD where you will be able to manage your slaves (it's not real, (or yes?) 🧐 )!
+Un CRUD para que puedas administrar a tus esclavos (no es real, (o si?) 🧐 )
 
-## Available scripts 👨‍💻
+## Uso
 
->  All the scripts in the project directory
+>  Todos los scripts en el directorio del proyecto
 
-Install the project modules:
+Instalar las dependencias del proyecto:
 
     cd api
     npm i
     cd ../frontend
     npm i
     
-### Api scripts🔗💻
+### API
 
->  All the scripts in the api directory: *./api*
+>  Todos los proyectos en el directorio de la API: *./api*
 
-run the api:
+Correr la api:
 
     cd api
     npm start
 
-build the api in *"./api/dist"*:
+Hacer una build de la API para produccion en *"./api/dist"*:
 
     cd api
     npm run build
 
-remove the *"./api/dist"* folder:
+Eliminar la carpeta *"./api/dist"* (build):
 
     cd api
     npm run clean
 
-### Frontend scripts🎆🎇
+### Client
 
->  All the scripts in the frontend directory: *./frontend*
+>  Todos los scripts en el directorio del cliente: *./frontend*
 
-run the frontend in development mode:
+Correr el cliente en modo desarrollo:
 
     npm start
 
-build the frontend in *"./frontend/build"*:
+Hacer una build del cliente en *"./frontend/build"*:
 
     npm run build
 
-remove the *./frontend/build* folder:
+Eliminar la build *./frontend/build*:
 
     npm run eject
 
-test the frontend:
+Correr los test del cliente:
 
     npm run test
